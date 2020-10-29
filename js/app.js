@@ -42,19 +42,27 @@ function guessLanguage(){
 guessLanguage();
 
 
+function guessPainting(){
 
+    var likeSailboats = prompt('Yes or No; Does Nick like sailboats?');
 
-var likeSailboats = prompt('Yes or No; Does Nick like sailboats?');
+    if (likeSailboats.toLowerCase() === 'yes' || likeSailboats.toLowerCase() === 'y'){
+        alert('Right on! Nick wants to buy one someday.')
+        correctGuesses [2] = 1;
+        console.log (correctGuesses)
+    } else if (likeSailboats.toLowerCase() === 'no' || likeSailboats.toLowerCase() === 'n') {
+        alert('Whoops! Nick actually wants to buy a sailboat someday.')
+    } else {
+        alert('Sorry, a Yes or No answer was needed. But since you seem like a nice person, the correct answer was Yes; Nick wants to buy a sailboat someday.')
+    }
 
-if (likeSailboats.toLowerCase() === 'yes' || likeSailboats.toLowerCase() === 'y'){
-    alert('Right on! Nick wants to buy one someday.')
-    correctGuesses [2] = 1;
-    console.log (correctGuesses)
-} else if (likeSailboats.toLowerCase() === 'no' || likeSailboats.toLowerCase() === 'n') {
-    alert('Whoops! Nick actually wants to buy a sailboat someday.')
-} else {
-    alert('Sorry, a Yes or No answer was needed. But since you seem like a nice person, the correct answer was Yes; Nick wants to buy a sailboat someday.')
 }
+
+guessPainting();
+
+
+
+
 
 var studyPainting = prompt('Yes or No; Did Nick study painting?');
 
