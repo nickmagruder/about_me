@@ -83,53 +83,82 @@ guessPainting();
 
 
 
-var liveInFlorida = prompt('Yes or No; Did Nick live in Florida?');
 
-if (liveInFlorida.toLowerCase() === 'yes' || liveInFlorida.toLowerCase() === 'y'){
-    alert('Spot on! Nick lived in Florida for 3 years.')
-    correctGuesses [4] = 1;
-    console.log (correctGuesses)
-} else if (liveInFlorida.toLowerCase() === 'no' || liveInFlorida.toLowerCase() === 'n') {
-    alert('Dang! Nick lived in Florida for 3 years.')
-} else {
-    alert('Sorry, a Yes or No answer was needed. But since you seem like a nice person, the correct answer was Yes; Nick lived in Florida for 3 years.')
-}
+function guessFlorida(){
 
-for (var guesses = 0; guesses < 4; guesses++) {
-    var guess = parseInt(prompt('Guess my favorite number! It is between 1-100 and you have 4 attempts!'));
-if (guess === 12){
-    alert('Wow, you got it! 12 is definitely the best Number.');
-    correctGuesses [5] = 1;
-    console.log (correctGuesses);
-    break;
-}else if (guess !== 12 && guesses === 3) {
-    alert('Sorry, you\'re out of guesses. The correct number is 12.');
-}else if (guess !== 12) {
-    alert('Sorry, incorrect, please guess again!');
-}
+    var liveInFlorida = prompt('Yes or No; Did Nick live in Florida?');
+
+    if (liveInFlorida.toLowerCase() === 'yes' || liveInFlorida.toLowerCase() === 'y'){
+        alert('Spot on! Nick lived in Florida for 3 years.')
+        correctGuesses [4] = 1;
+        console.log (correctGuesses)
+    } else if (liveInFlorida.toLowerCase() === 'no' || liveInFlorida.toLowerCase() === 'n') {
+        alert('Dang! Nick lived in Florida for 3 years.')
+    } else {
+        alert('Sorry, a Yes or No answer was needed. But since you seem like a nice person, the correct answer was Yes; Nick lived in Florida for 3 years.')
+    }
+  
 }
 
-var birds = ['Flicker', 'Osprey', 'Blue Jay', 'Cardinal', 'Falcon', 'Chickadee'];
+guessFlorida();
 
-for (var i = 0; i < 6; i++) {
-    var birdGuess = prompt('Guess one of my favorite birds! You have 6 attempts.');
-if (birdGuess.toLowerCase() === 'flicker' || birdGuess.toLowerCase() === 'osprey'|| birdGuess.toLowerCase() === 'blue jay'|| birdGuess.toLowerCase() === 'cardinal' || birdGuess.toLowerCase() === 'Falcon'|| birdGuess.toLowerCase() === 'chickadee'){
-    alert('Correct! The ' + birdGuess + ' is an awesome birb.');
-    correctGuesses [6] = 1;
-    console.log (correctGuesses);
-    break;
-}else if (birdGuess.toLowerCase() !== 'flicker' && i === 5) {
-    alert('Sorry, you\'re out of guesses. My five favorite birds are ' + birds);
-}else if ((birdGuess.toLowerCase() !== 'flicker' || birdGuess.toLowerCase() !== 'osprey'|| birdGuess.toLowerCase() !== 'blue jay'|| birdGuess.toLowerCase() !== 'cardinal' || birdGuess.toLowerCase() !== 'Falcon'|| birdGuess.toLowerCase() !== 'chickadee')) {
-    alert('Sorry, incorrect, please guess again!');
+
+
+function numGuessingGame(){
+
+    for (var guesses = 0; guesses < 4; guesses++) {
+        var guess = parseInt(prompt('Guess my favorite number! It is between 1-100 and you have 4 attempts!'));
+    if (guess === 12){
+        alert('Wow, you got it! 12 is definitely the best Number.');
+        correctGuesses [5] = 1;
+        console.log (correctGuesses);
+        break;
+    }else if (guess !== 12 && guesses === 3) {
+        alert('Sorry, you\'re out of guesses. The correct number is 12.');
+    }else if (guess !== 12) {
+        alert('Sorry, incorrect, please guess again!');
+    }
+
+    }
+
+
 }
+
+numGuessingGame();
+
+
+function guessingBirds(){
+
+    var birds = ['Flicker', 'Osprey', 'Blue Jay', 'Cardinal', 'Falcon', 'Chickadee'];
+
+    for (var i = 0; i < 6; i++) {
+        var birdGuess = prompt('Guess one of my favorite birds! You have 6 attempts.');
+    if (birdGuess.toLowerCase() === 'flicker' || birdGuess.toLowerCase() === 'osprey'|| birdGuess.toLowerCase() === 'blue jay'|| birdGuess.toLowerCase() === 'cardinal' || birdGuess.toLowerCase() === 'Falcon'|| birdGuess.toLowerCase() === 'chickadee'){
+        alert('Correct! The ' + birdGuess + ' is an awesome birb.');
+        correctGuesses [6] = 1;
+        console.log (correctGuesses);
+        break;
+    }else if (birdGuess.toLowerCase() !== 'flicker' && i === 5) {
+        alert('Sorry, you\'re out of guesses. My five favorite birds are ' + birds);
+    }else if ((birdGuess.toLowerCase() !== 'flicker' || birdGuess.toLowerCase() !== 'osprey'|| birdGuess.toLowerCase() !== 'blue jay'|| birdGuess.toLowerCase() !== 'cardinal' || birdGuess.toLowerCase() !== 'Falcon'|| birdGuess.toLowerCase() !== 'chickadee')) {
+        alert('Sorry, incorrect, please guess again!');
+    }
+    
+    }
+
 }
+
+guessingBirds();
+
 
 var sum = correctGuesses.reduce(function(a, b){
     return a + b;
 }, 0);
 
 console.log(sum);
+
+
+
 /* Array Hint adapted from this tutorial: https://www.tutorialrepublic.com/faq/how-to-find-the-sum-of-an-array-of-numbers-in-javascript.php */
 
 alert ('Thanks for taking the quiz ' + userName + '! You got ' + sum + ' questions right! Click OK to see the correct answers.')
