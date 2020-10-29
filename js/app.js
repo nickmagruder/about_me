@@ -42,7 +42,7 @@ function guessLanguage(){
 guessLanguage();
 
 
-function guessPainting(){
+function guessSailboats(){
 
     var likeSailboats = prompt('Yes or No; Does Nick like sailboats?');
 
@@ -58,23 +58,30 @@ function guessPainting(){
 
 }
 
+guessSailboats();
+
+
+
+function guessPainting(){
+
+    var studyPainting = prompt('Yes or No; Did Nick study painting?');
+
+    if (studyPainting.toLowerCase() === 'yes' || studyPainting.toLowerCase() === 'y'){
+        alert('Uh oh! Nick studied photography, design and International Studies.')
+    } else if (studyPainting.toLowerCase() === 'no' || studyPainting.toLowerCase() === 'n') {
+        alert('Hooray! Nick did not study painting, but wouldnt mind to learn!')
+        correctGuesses [3] = 1;
+        console.log (correctGuesses)
+    } else {
+        alert('Sorry, a Yes or No answer was needed. But since you seem like a nice person, the correct answer was No; Nick did not study painting, but wouldnt mind to learn!')
+    }
+
+
+}
+
 guessPainting();
 
 
-
-
-
-var studyPainting = prompt('Yes or No; Did Nick study painting?');
-
-if (studyPainting.toLowerCase() === 'yes' || studyPainting.toLowerCase() === 'y'){
-    alert('Uh oh! Nick studied photography, design and International Studies.')
-} else if (studyPainting.toLowerCase() === 'no' || studyPainting.toLowerCase() === 'n') {
-    alert('Hooray! Nick did not study painting, but wouldnt mind to learn!')
-    correctGuesses [3] = 1;
-    console.log (correctGuesses)
-} else {
-    alert('Sorry, a Yes or No answer was needed. But since you seem like a nice person, the correct answer was No; Nick did not study painting, but wouldnt mind to learn!')
-}
 
 var liveInFlorida = prompt('Yes or No; Did Nick live in Florida?');
 
