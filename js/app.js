@@ -23,17 +23,26 @@ function guessSport(){
 guessSport();
 
 
-var secondLanguage = prompt('Yes or No; Is Nick\'s second language Swahili?');
+function guessLanguage(){
 
-if (secondLanguage.toLowerCase() === 'yes' || secondLanguage.toLowerCase() === 'y'){
-    alert('Bummer! Nick minored in Spanish, not Swahili.')
-} else if (secondLanguage.toLowerCase() === 'no' || secondLanguage.toLowerCase() === 'n') {
-    alert('You got it! Nick speaks English and Spanish.')
-    correctGuesses [1] = 1;
-    console.log (correctGuesses)
-} else {
-    alert('Sorry, a Yes or No answer was needed. But since you seem like a nice person, the correct answer was No; Nick speaks English and Spanish.')
+    var secondLanguage = prompt('Yes or No; Is Nick\'s second language Swahili?');
+
+    if (secondLanguage.toLowerCase() === 'yes' || secondLanguage.toLowerCase() === 'y'){
+        alert('Bummer! Nick minored in Spanish, not Swahili.')
+    } else if (secondLanguage.toLowerCase() === 'no' || secondLanguage.toLowerCase() === 'n') {
+        alert('You got it! Nick speaks English and Spanish.')
+        correctGuesses [1] = 1;
+        console.log (correctGuesses)
+    } else {
+        alert('Sorry, a Yes or No answer was needed. But since you seem like a nice person, the correct answer was No; Nick speaks English and Spanish.')
+    }
+
 }
+
+guessLanguage();
+
+
+
 
 var likeSailboats = prompt('Yes or No; Does Nick like sailboats?');
 
