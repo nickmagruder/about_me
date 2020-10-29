@@ -4,17 +4,24 @@ var correctGuesses = [0, + 0, + 0, + 0, + 0, + 0, + 0]
 var userName = prompt('Welcome to the Nick Magruder Quiz! What\'s your name stranger?');
 alert('Thanks for dropping by, ' + userName + '!!!');
 
-var favoriteSport = prompt('Yes or No; Is Nick\'s favorite sport rock climbing?');
+function guessSport(){
 
-if (favoriteSport.toLowerCase() === 'yes' || favoriteSport.toLowerCase() === 'y'){
-    alert('Sorry! Nick loves riding bikes, not rock climbing.')
-} else if (favoriteSport.toLowerCase() === 'no' || favoriteSport.toLowerCase() === 'n') {
-    alert('Correct! Nick actually loves riding bikes.')
-    correctGuesses [0] = 1;
-    console.log (correctGuesses)
-} else {
-    alert('Sorry, a Yes or No answer was needed. But since you seem like a nice person, the correct answer was No; Nick loves riding bikes!')
+    var favoriteSport = prompt('Yes or No; Is Nick\'s favorite sport rock climbing?');
+
+    if (favoriteSport.toLowerCase() === 'yes' || favoriteSport.toLowerCase() === 'y'){
+        alert('Sorry! Nick loves riding bikes, not rock climbing.')
+    } else if (favoriteSport.toLowerCase() === 'no' || favoriteSport.toLowerCase() === 'n') {
+        alert('Correct! Nick actually loves riding bikes.')
+        correctGuesses [0] = 1;
+        console.log (correctGuesses)
+    } else {
+        alert('Sorry, a Yes or No answer was needed. But since you seem like a nice person, the correct answer was No; Nick loves riding bikes!')
+    }
+
 }
+
+guessSport();
+
 
 var secondLanguage = prompt('Yes or No; Is Nick\'s second language Swahili?');
 
