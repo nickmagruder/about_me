@@ -64,15 +64,6 @@ if (liveInFlorida.toLowerCase() === 'yes' || liveInFlorida.toLowerCase() === 'y'
     alert('Sorry, a Yes or No answer was needed. But since you seem like a nice person, the correct answer was Yes; Nick lived in Florida for 3 years.')
 }
 
-/*
-Question 6 (Guess a #)
-- Add a 6th question to the guessing game that takes in a numeric input by prompting the user to guess a number.
-- Indicates through an alert if the guess is “too high” or “too low”.
-- It should give the user exactly four opportunities to get the correct answer.
-- After all attempts have been exhausted, tell the user the correct answer. Consider using a loop of some sort.
-*/
-
-
 for (var guesses = 0; guesses < 4; guesses++) {
     var guess = parseInt(prompt('Guess my favorite number! It is between 1-100 and you have 4 attempts!'));
 if (guess === 12){
@@ -86,15 +77,6 @@ if (guess === 12){
     alert('Sorry, incorrect, please guess again!');
 }
 }
-
-/* 
-Question 7 (Guess Something Else)
-- Add a 7th question that has multiple possible correct answers that are stored in an array.
-- Give the user 6 attempts to guess the correct answer.
-- The guesses will end once the user guesses a correct answer or they run out of attempts.
-- Display all the possible correct answers to the user.
-- Consider using a loop of some sort for this question.
-*/
 
 var birds = ['Flicker', 'Osprey', 'Blue Jay', 'Cardinal', 'Falcon', 'Chickadee'];
 
@@ -120,3 +102,29 @@ console.log(sum);
 /* Array Hint adapted from this tutorial: https://www.tutorialrepublic.com/faq/how-to-find-the-sum-of-an-array-of-numbers-in-javascript.php */
 
 alert ('Thanks for taking the quiz ' + userName + '! You got ' + sum + ' questions right! Click OK to see the correct answers.')
+
+/* 
+1. Fork and clone repo
+
+2. Extend and Refine
+
+- You’ll be making some edits to each other’s sites. After each bit of work is completed (in other words, after each successful modification of a single question), be sure to do an add-commit-push cycle (a-c-p) to place the code on GitHub and preserve a versioned history of your work.
+
+- Move the logic for all questions into functions: Today we learned about functions, and now we’ll move the logic for the individual questions into separate functions, and call those functions to run the game. 
+
+- In its most basic sense, this is pretty simple and straightforward: ‘wrap’ the logic and variables for a given question with function someFuncNameYouChoose() { at the beginning, and add a closing curly brace } at the end. To make the function execute, just call it afterwards: someFuncNameYouChoose(); After completing this step the game should behave exactly as it did before. a-c-p
+
+- Update the README file: In the README file, add in the names of the Driver and Navigator and indicate that the code was worked on together. This is basic record-keeping so that you can keep up with how the code has been edited in a user-friendly format. a-c-p
+
+3. Push to GitHub - Make Pull Request
+
+- Once everything is finished, and the Driver has done the last edits and pushed them to GitHub, it’s time to send the edited code to the owner (who has been in the Navigator role the whole time, of course). We do this with a GitHub feature called a Pull Request, which we generally refer to as a PR.
+
+- From the Driver’s repo that is a fork of the Navigator’s repo, hit the green button that says ‘Create pull request’.
+
+-Follow the remaining steps as described onscreen and as shown here: https://help.GitHub.com/articles/using-pull-requests. (These instructions for doing a pull request from a forked repo to its source are deliberately vague, to give you practice in reading through instructions, trying things out, solving problems collaboratively, and getting guidance from documentation).
+
+- The owner of the code (the Navigator) then goes to their GitHub repo for the project and accepts the pull request. After that, in terminal on their laptop, while in the game directory, enter the command ‘git pull origin master’ to retrieve the modified code from GitHub.
+
+- When everything is finished for one person’s project, submit the links for the last pull request made from the Driver to the Navigator (in both cases) in the Canvas assignment.
+*/
